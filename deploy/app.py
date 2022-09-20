@@ -111,7 +111,7 @@ def final_recommender(question, df):
 
 user_input = user_input +' '+ amenities_string
 
-st.write(final_recommender(user_input, updated_df))
+st.write(final_recommender(user_input.lower(), updated_df))
 
 # map
 mapping = updated_df[['latitude', 'longitude']]
