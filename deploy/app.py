@@ -106,8 +106,8 @@ def final_recommender(question, df):
     
     # Pick out the top 10
     #return the top 10
-    top_10 = df[['name', 'listing_url', 'price']].head(10)
-    return HTML(top_10.to_html(render_links= True, escape= False))
+    top_5 = df[['name', 'listing_url', 'price']].head(5)
+    return HTML(top_5.to_html(render_links= True, escape= False))
 
 user_input = user_input +' '+ amenities_string
 
